@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | InnovateHive</title>
+    
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Background FX -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="interactive-bg"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo magnet">
+                <i class="fas fa-cube" style="margin-right: 10px; color: var(--accent-color);"></i>
+                <span style="font-weight: 800;">InnovateHive</span>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <!-- IMPORTANT: Added '/' to href to ensure it goes back to home page sections -->
+                <a href="/#home" class="nav-link magnet">Home</a>
+                <a href="/#about" class="nav-link magnet">About</a>
+                <a href="/#services" class="nav-link magnet">Services</a>
+                <a href="/#projects" class="nav-link magnet">Projects</a>
+                <a href="/#contact" class="nav-link magnet">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT STARTS HERE -->
+    <!-- Hero Section specific to the Detail Page -->
+    <section class="hero" style="min-height: 60vh; align-items: flex-end; padding-bottom: 4rem;">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">{{ title }}</h1>
+                <p class="hero-subtitle">Comprehensive solutions designed to accelerate your digital transformation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Content Section -->
+    <section class="about" style="padding-top: 0;">
+        <div class="container">
+            <div class="about-content glass-effect" data-aos="fade-up">
+                <h3 style="margin-bottom: 1.5rem; font-size: 2rem;">Overview</h3>
+                <p class="about-text">
+                    This is the detailed view for <strong>{{ title }}</strong>. At InnovateHive, we ensure that every project we undertake is built with precision, scalability, and user experience in mind.
+                </p>
+                <p class="about-text">
+                    From initial discovery to final deployment, we use state-of-the-art technologies to deliver measurable results that align with your business goals.
+                </p>
+                
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="margin-bottom: 1rem; color: var(--accent-color);">What We Deliver</h4>
+                    <ul style="list-style: none; color: var(--text-muted); display: grid; gap: 0.8rem;">
+                        <li style="display:flex; align-items:center;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 10px;"></i> Customized Implementation Strategy</li>
+                        <li style="display:flex; align-items:center;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 10px;"></i> End-to-End Development</li>
+                        <li style="display:flex; align-items:center;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 10px;"></i> Performance Optimization</li>
+                        <li style="display:flex; align-items:center;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 10px;"></i> 24/7 Dedicated Support</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <a href="/#contact" class="btn btn-primary magnet">Enquire Now</a>
+                    <a href="/" class="btn btn-secondary magnet" style="margin-left: 1rem;">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTENT ENDS HERE -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 InnovateHive. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="magnet"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="magnet"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="magnet"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float magnet" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
